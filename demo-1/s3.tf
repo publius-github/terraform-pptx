@@ -25,7 +25,7 @@ resource "aws_s3_bucket_policy" "default" {
         "${aws_s3_bucket.default.arn}/*"
       ],
       "Principal": {
-        "AWS": "arn:aws:iam::${var.account_id}:root"
+        "AWS": "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"
       }
     },
     {

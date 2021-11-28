@@ -1,5 +1,5 @@
 resource "aws_network_acl" "default_networg_acl" {
-  count  = lookup(var.az_count, terraform.workspace, "3")
+  count  = var.az_count
   vpc_id = aws_vpc.default_vpc.id
 
   subnet_ids = [

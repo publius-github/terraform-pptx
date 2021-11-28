@@ -1,7 +1,3 @@
-variable "account_id" {
-  default = "839374638189"
-}
-
 variable "region" {
   default = "us-east-1"
 }
